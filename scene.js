@@ -81,7 +81,7 @@
   let yaw=0,lit=false,frame=0,disposed=false;
   function render(){if(disposed)return;desk.rotation.y=yaw;renderer.render(scene,camera);}
   function requestRender(){if(frame)return;frame=requestAnimationFrame(()=>{frame=0;render();});}
-  function resize(){const {width,height}=host.getBoundingClientRect();if(!width||!height)return;renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();requestRender();}
+  function resize(){const {width,height}=host.getBoundingClientRect();if(!width||!height)return;renderer.setSize(width,height,false);camera.aspect=width/height;const distance=Math.max(1,.95/camera.aspect);camera.position.set(6.6*distance,5.1*distance,7.2*distance);camera.lookAt(0,.88,0);camera.updateProjectionMatrix();requestRender();}
   const resizeObserver=new ResizeObserver(resize);resizeObserver.observe(host);
   rotateButton.addEventListener('click',()=>{yaw+=Math.PI/6;requestRender();});
   resetButton.addEventListener('click',()=>{yaw=0;requestRender();});
@@ -92,6 +92,7 @@
   canvas.addEventListener('pointerup',e=>{if(!drag)return;const clicked=!drag.moved;drag=null;if(clicked){const r=canvas.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);raycaster.setFromCamera(pointer,camera);if(raycaster.intersectObjects(laptopMeshes,true).length)document.dispatchEvent(new CustomEvent('workspace:project'));}});
   canvas.addEventListener('pointercancel',()=>drag=null);
   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();disposed=true;fallback();});
-  window.addEventListener('pagehide',()=>{disposed=true;resizeObserver.disconnect();cancelAnimationFrame(frame);renderer.dispose();}, {once:true});
+  window.addEventListener('pagehide',event=>{if(event.persisted)return;disposed=true;resizeObserver.disconnect();cancelAnimationFrame(frame);renderer.dispose();});
+  window.addEventListener('pageshow',event=>{if(event.persisted)resize();});
   resize();
 })();
