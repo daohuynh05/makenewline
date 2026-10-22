@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#e4e3d9">
   <meta name="description" content="Đào Văn Huỳnh — sinh viên CNTT, tập trung Backend & Full-stack. Khám phá hồ sơ, kỹ năng và các dự án Aurora Logistics, AutoWash Pro, Flight Booking.">
-  <meta property="og:title" content="Huỳnh’s Space — Software Engineer Portfolio">
-  <meta property="og:description" content="Một không gian nhỏ để khám phá con người, dự án và những điều mình đang xây dựng.">
+  <meta property="og:title" content="Đào Văn Huỳnh — Backend & Full-stack Developer">
+  <meta property="og:description" content="Sinh viên CNTT, dự kiến tốt nghiệp 2027. Xem dự án, phần đóng góp, kỹ năng và thông tin liên hệ của Đào Văn Huỳnh.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://daohuynh05.github.io/makenewline/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -14,10 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script defer src="vendor/three.min.js"></script>
-  <script defer src="scene.js"></script>
   <script defer src="script.js"></script>
-  <title>Huỳnh’s Space — Đào Văn Huỳnh</title>
+  <title>Portfolio — Đào Văn Huỳnh</title>
 </head>
 <body>
   <a class="skip-link" href="#app-main">Đến nội dung chính</a>
@@ -26,30 +24,40 @@
     <div class="tablet-screen">
       <div class="status-bar"><time id="local-clock">--:--</time><span>THỦ ĐỨC, TP. HỒ CHÍ MINH</span><span class="status-right"><i aria-hidden="true"></i> PERSONAL PORTFOLIO</span></div>
       <header class="app-header">
-        <a class="brand" href="#home" aria-label="Huỳnh’s Space — Trang chính"><span class="brand-symbol" aria-hidden="true">h<span>.</span></span><span>huỳnh’s space<span class="brand-subtitle">A LITTLE SPACE. A LOT OF IDEAS.</span></span></a>
-        <span class="header-context" id="header-context">Chào bạn, rất vui vì bạn ghé qua.</span>
-        <button type="button" class="home-button" data-route="home"><span aria-hidden="true">⌂</span> <span>Trang chính</span></button>
+        <a class="brand" href="#home" aria-label="Đào Văn Huỳnh — Trang chính"><span class="brand-symbol" aria-hidden="true">h<span>.</span></span><span>Đào Văn Huỳnh<span class="brand-subtitle">BACKEND & FULL-STACK DEVELOPER</span></span></a>
+        <span class="header-context" id="header-context">Đang tìm cơ hội Software Engineer · Entry-level</span>
+        <a class="header-email" href="mailto:daovanhuynh25@gmail.com">Gửi email ↗</a>
+        <button type="button" class="home-button" data-route="home" aria-label="Trang chính"><span aria-hidden="true">⌂</span> <span>Trang chính</span></button>
       </header>
       <main class="app-main" id="app-main" tabindex="-1">
-        <section class="home-grid" id="home-screen" aria-label="Chọn một mục để khám phá">
-          <button type="button" class="tile profile-tile" data-route="about" aria-label="Về mình — Đào Văn Huỳnh">
-            <span class="tile-kicker">XIN CHÀO, MÌNH LÀ</span><h1>Đào Văn<br>Huỳnh<span>.</span></h1><span class="profile-orbit" aria-hidden="true"></span><img class="profile-avatar" src="assets/huynh-avatar.webp" alt="" width="1024" height="1024"><span class="profile-role">Backend & Full-stack <span aria-hidden="true">↗</span></span>
+        <section class="home-grid" id="home-screen" aria-label="Giới thiệu, dự án và liên hệ">
+          <button type="button" class="tile profile-tile" data-route="about" aria-label="Giới thiệu và học vấn của Đào Văn Huỳnh">
+            <span class="tile-kicker">GIỚI THIỆU</span>
+            <h1>Đào Văn<br>Huỳnh<span>.</span></h1>
+            <span class="profile-specialty">Backend & Full-stack Developer</span>
+            <span class="profile-study">Sinh viên CNTT<br>Dự kiến tốt nghiệp 2027</span>
+            <span class="profile-search">Tìm cơ hội Software Engineer · Entry-level</span>
+            <span class="profile-orbit" aria-hidden="true"></span>
+            <img class="profile-avatar" src="assets/huynh-avatar.webp" alt="" width="1024" height="1024">
+            <span class="profile-role">Giới thiệu & học vấn <span aria-hidden="true">↗</span></span>
           </button>
-          <button type="button" class="tile aurora-tile" data-route="project/aurora" aria-label="Khám phá dự án Aurora Logistics">
-            <span class="tile-kicker">DỰ ÁN NỔI BẬT <span aria-hidden="true">↗</span></span><span class="aurora-name">Aurora<br>Logistics<span>.</span></span><span class="aurora-role">Backend Developer <span>· Nhóm 4 người</span></span>
-            <svg class="aurora-art" viewBox="0 0 230 190" aria-hidden="true"><path d="M30 132 111 175 209 123" fill="none" stroke="#5b6256" stroke-width="1"/><g stroke="#30362d" stroke-width="2" stroke-linejoin="round"><path d="m54 96 52-29 52 29-52 29z" fill="#c9d2ac"/><path d="m54 96 52 29v54l-52-29z" fill="#8c9b6a"/><path d="m106 125 52-29v54l-52 29z" fill="#a9b984"/><path d="m106 67 0 59" fill="none" stroke="#697b52"/><path d="m117 55 43-24 43 24-43 24z" fill="#f2cc6d"/><path d="m117 55 43 24v46l-43-24z" fill="#d1a846"/><path d="m160 79 43-24v46l-43 24z" fill="#e5bb50"/><path d="m143 41 44 24v17" fill="none" stroke="#fff0b3" stroke-width="7"/></g><circle cx="46" cy="48" r="4" fill="#a8b58d"/><path d="M46 52v20h25" fill="none" stroke="#79866c" stroke-dasharray="3 4"/><circle cx="203" cy="151" r="4" fill="#ebc664"/></svg>
+          <button type="button" class="tile aurora-tile" data-route="project/aurora" aria-label="Aurora Logistics — vai trò Backend Developer, nhóm 4 người">
+            <span class="tile-kicker">DỰ ÁN / BACKEND <span aria-hidden="true">↗</span></span>
+            <span class="aurora-name">Aurora Logistics<span>.</span></span>
+            <span class="featured-summary">Hóa đơn, tính phí và thông báo<br>cho nền tảng logistics.</span>
+            <span class="featured-stack">NestJS · PostgreSQL · RabbitMQ</span>
+            <span class="aurora-role">Backend Developer <span>· Nhóm 4 người</span></span>
+            <svg class="aurora-art" viewBox="0 0 230 190" aria-hidden="true"><path d="M30 132 111 175 209 123" fill="none" stroke="#5b6256"/><g stroke="#30362d" stroke-width="2" stroke-linejoin="round"><path d="m54 96 52-29 52 29-52 29z" fill="#c9d2ac"/><path d="m54 96 52 29v54l-52-29z" fill="#8c9b6a"/><path d="m106 125 52-29v54l-52 29z" fill="#a9b984"/><path d="m117 55 43-24 43 24-43 24z" fill="#f2cc6d"/><path d="m117 55 43 24v46l-43-24z" fill="#d1a846"/><path d="m160 79 43-24v46l-43 24z" fill="#e5bb50"/><path d="m143 41 44 24v17" fill="none" stroke="#fff0b3" stroke-width="7"/></g></svg>
           </button>
-          <button type="button" class="tile contact-tile" data-route="contact" aria-label="Liên hệ với Huỳnh"><span class="tile-kicker">MỘT LỜI CHÀO?</span><span class="tile-title">Mình kết nối nhé<span>.</span></span><span class="tile-arrow" aria-hidden="true">↗</span></button>
-          <button type="button" class="tile skills-tile" data-route="skills" aria-label="Khám phá kỹ năng và công nghệ"><span class="tile-kicker">TRONG BỘ ĐỒ NGHỀ</span><span class="code-symbol" aria-hidden="true">&lt;/&gt;</span><span class="tile-title">Từ giao diện<br>đến hệ thống.</span><span class="mini-tags"><span>TypeScript</span><span>NestJS</span><span>React</span><span>Spring Boot</span><span>PostgreSQL</span></span><span class="tile-arrow" aria-hidden="true">↗</span></button>
-          <button type="button" class="tile projects-tile" data-route="projects" aria-label="Xem ba dự án trong CV"><span class="tile-kicker">SELECTED WORK</span><span class="tile-title">Những gì<br>mình đã làm.</span><span class="project-number" aria-hidden="true">03</span><span class="tile-bottom">Dự án trong CV <span aria-hidden="true">↗</span></span></button>
-          <button type="button" class="tile desk-tile" data-route="workspace" aria-label="Mở góc làm việc 3D tương tác"><span class="tile-kicker">GÓC LÀM VIỆC</span><img src="desk-fallback.svg" alt="" width="600" height="500"><span class="tile-bottom">Chạm để khám phá <span aria-hidden="true">↗</span></span><span class="desk-badge">3D</span></button>
-          <button type="button" class="tile education-tile" data-route="education" aria-label="Xem học vấn và định hướng"><span class="education-icon" aria-hidden="true">↗</span><span><span class="tile-kicker">HỌC VẤN & ĐỊNH HƯỚNG</span><span class="tile-title">Đang học. Luôn học.</span><span class="education-note">Công nghệ thông tin · Dự kiến 2027</span></span></button>
-          <a class="tile github-tile" href="https://github.com/daohuynh05" target="_blank" rel="noopener noreferrer"><span class="github-mark" aria-hidden="true">git<span>/</span></span><span><span class="tile-kicker">OPEN SOURCE & MORE</span><span class="tile-title">Ghé GitHub của mình.</span></span><span class="tile-arrow" aria-hidden="true">↗</span></a>
+          <button type="button" class="tile project-tile autowash-tile" data-route="project/autowash" aria-label="AutoWash Pro — vai trò Full-stack Developer"><span class="tile-kicker">DỰ ÁN / FULL-STACK</span><span class="tile-title">AutoWash<br>Pro<span>.</span></span><span class="project-summary">Đặt lịch rửa xe,<br>quản lý và tích điểm.</span><span class="tile-tech">Spring Boot · React · PostgreSQL</span><span class="tile-bottom">Full-stack Developer <span aria-hidden="true">↗</span></span><span class="wash-decoration" aria-hidden="true">wash.</span></button>
+          <button type="button" class="tile project-tile booking-tile" data-route="project/booking" aria-label="Flight Booking — vai trò Frontend Developer"><span class="tile-kicker">DỰ ÁN / FRONTEND</span><span class="tile-title">Flight<br>Booking<span>.</span></span><span class="project-summary">Tìm chuyến bay,<br>chọn ghế và đặt vé.</span><span class="tile-tech">React · Redux Toolkit · Socket.IO</span><span class="tile-bottom">Frontend Developer <span aria-hidden="true">↗</span></span><span class="flight-decoration" aria-hidden="true">↗</span></button>
+          <button type="button" class="tile skills-tile" data-route="skills" aria-label="Kỹ năng — TypeScript, Java, NestJS, Spring Boot, React, PostgreSQL"><span class="tile-kicker">KỸ NĂNG</span><span class="tile-title">Backend<br> & Frontend</span><span class="mini-tags"><span>TypeScript</span><span>Java</span><span>NestJS</span><span>Spring Boot</span><span>React</span><span>PostgreSQL</span></span><span class="tile-bottom">Xem đầy đủ <span aria-hidden="true">↗</span></span></button>
+          <button type="button" class="tile contact-tile" data-route="contact" aria-label="Liên hệ — email, LinkedIn và điện thoại"><span class="tile-title">Liên hệ</span><span class="contact-summary">Email · LinkedIn · Điện thoại</span><span class="tile-arrow" aria-hidden="true">↗</span></button>
+          <a class="tile github-tile" href="https://github.com/daohuynh05" target="_blank" rel="noopener noreferrer"><span class="github-mark" aria-hidden="true">git<span>/</span></span><span><span class="tile-title">GitHub</span><span class="github-username">@daohuynh05</span></span><span class="tile-arrow" aria-hidden="true">↗</span></a>
         </section>
-        <section class="view-panel" id="detail-screen" hidden aria-labelledby="view-title"><div class="view-toolbar"><button type="button" id="back-button"><span aria-hidden="true">←</span> <span id="back-label">Trang chính</span></button><span id="view-category">HỒ SƠ</span><span class="view-index">HUỲNH / SPACE</span></div><div class="view-body" id="view-body"></div></section>
-        <section class="view-panel workspace-panel" id="workspace-screen" hidden aria-labelledby="workspace-title"><div class="view-toolbar"><button type="button" data-route="home"><span aria-hidden="true">←</span> Trang chính</button><span>THE QUIET WORKSPACE</span><span class="view-index">GÓC 01 / 01</span></div><div class="workspace-layout"><div class="workspace-scene" id="workspace-scene"><div class="scene-aura" aria-hidden="true"></div><canvas id="desk-canvas" aria-label="Bàn làm việc 3D. Kéo ngang để xoay hoặc dùng các nút bên dưới. Bấm laptop để mở dự án Aurora."></canvas><div class="scene-fallback" hidden><img src="desk-fallback.svg" alt="Bàn làm việc với laptop, cây nhỏ, sách và cà phê" width="600" height="500"></div><div class="scene-controls"><button type="button" id="rotate-desk" aria-label="Xoay bàn làm việc 30 độ">Xoay bàn ↻</button><button type="button" id="reset-desk">Đặt lại</button><button type="button" id="toggle-lamp" aria-pressed="false">Bật đèn <span class="lamp-indicator" aria-hidden="true"></span></button></div><span class="drag-hint">↔ Kéo để xoay góc nhìn</span><span class="scene-caption">Bấm laptop để xem một dự án.</span></div><div class="workspace-copy"><p class="section-kicker">A SMALL CORNER OF MY WORLD</p><h2 id="workspace-title" tabindex="-1">Một góc nhỏ.<br><span>Nhiều ý tưởng.</span></h2><p>Một chiếc laptop, vài cuốn sách và đủ sự tò mò để bắt đầu. Đây là góc làm việc 3D của mình — bạn cứ thử xoay và bật đèn nhé.</p><button type="button" class="action-button" data-route="projects">Xem những gì mình đang xây ↗</button></div></div></section>
+        <section class="view-panel" id="detail-screen" hidden aria-labelledby="view-title"><div class="view-toolbar"><button type="button" id="back-button"><span aria-hidden="true">←</span> <span id="back-label">Trang chính</span></button><span id="view-category">HỒ SƠ</span><span class="view-index">ĐÀO VĂN HUỲNH</span></div><div class="view-body" id="view-body"></div></section>
       </main>
-      <footer class="app-footer"><span id="footer-caption">Bấm một ô để mở một phần câu chuyện.</span><button type="button" class="home-indicator" data-route="home" aria-label="Về màn hình chính"><span></span></button><span class="footer-key">ESC <span>về trang chính</span></span></footer>
+      <footer class="app-footer"><span id="footer-caption">Chọn dự án để xem vai trò và phần đóng góp.</span><button type="button" class="home-indicator" data-route="home" aria-label="Về màn hình chính"><span></span></button><span class="footer-key">ESC <span>về trang chính</span></span></footer>
     </div>
   </div>
   <div class="live-message" role="status" aria-live="polite" id="live-message"></div>
